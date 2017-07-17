@@ -1,3 +1,3 @@
 // index.ios.js
 
-import "./lib/index.ios"
+import "./lib/index"
