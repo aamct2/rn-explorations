@@ -1,11 +1,5 @@
 import * as React from "react"
 import { AppRegistry } from "react-native"
-import { StackNavigator } from "react-navigation"
-import Screens from "./screens/index"
+import RootScreen from "./rootScreen"
 
-const SimpleApp = StackNavigator({
-  Home: { screen: Screens.HomeScreen },
-  Second: { screen: Screens.SecondScreen },
-})
-
-AppRegistry.registerComponent("FooApp", () => SimpleApp)
+AppRegistry.registerComponent("FooApp", () => RootScreen)
