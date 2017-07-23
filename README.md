@@ -4,6 +4,14 @@ Explorations in React Native
 
 ## Projects
 
+### Gestures
+
+Exploring gesture handling
+
+| **Project** | **Status** | **Gesture**  |
+|-------------|------------|--------------|
+| QuxApp      | 😀         | PanResponder |
+
 ### Navigation
 
 Exploring navigation frameworks

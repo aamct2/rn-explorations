@@ -1,0 +1,3 @@
+rootProject.name = 'QuxApp'
+
+include ':app'
