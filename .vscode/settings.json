@@ -15,6 +15,7 @@
     "**/node_modules": true,
     "**/bower_components": true
   },
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "workbench.colorTheme": "Visual Studio Dark"
+  "tslint.nodePath": "./FooApp/node_modules/",
+  "typescript.tsdk": "./FooApp/node_modules/typescript/lib",
+  "workbench.colorTheme": "Default Dark+"
 }
