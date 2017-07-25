@@ -3,7 +3,7 @@ import { Animated, Dimensions, PanResponder, StyleSheet, Text, View, } from "rea
 export default class RootScreen extends React.Component {
     constructor(props) {
         super(props);
-        this._onPanResponderRelease = (e, gestureState) => {
+        this.onPanResponderRelease = (e, gestureState) => {
             if (this.isDropZone(gestureState)) {
                 this.setState({
                     showDraggable: false,
@@ -27,11 +27,11 @@ export default class RootScreen extends React.Component {
                     dy: this.state.pan.y,
                 },
             ]),
-            onPanResponderRelease: this._onPanResponderRelease,
+            onPanResponderRelease: this.onPanResponderRelease,
         });
     }
     isDropZone(gestureState) {
-        var dz = this.state.dropZoneValues;
+        const dz = this.state.dropZoneValues;
         return gestureState.moveY > dz.y && gestureState.moveY < dz.y + dz.height;
     }
     setDropZoneValues(event) {
@@ -54,8 +54,8 @@ export default class RootScreen extends React.Component {
     }
 }
 const radius = 36;
-let Window = Dimensions.get("window");
-let styles = StyleSheet.create({
+const Window = Dimensions.get("window");
+const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
     },

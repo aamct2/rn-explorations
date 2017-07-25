@@ -40,11 +40,11 @@ export default class RootScreen extends React.Component<{}, RootScreenState> {
           dy: this.state.pan.y,
         },
       ]),
-      onPanResponderRelease: this._onPanResponderRelease,
+      onPanResponderRelease: this.onPanResponderRelease,
     })
   }
 
-  _onPanResponderRelease = (e: GestureResponderEvent, gestureState: PanResponderGestureState): void => {
+  onPanResponderRelease = (e: GestureResponderEvent, gestureState: PanResponderGestureState): void => {
     if (this.isDropZone(gestureState)) {
       this.setState({
         showDraggable: false,
@@ -55,7 +55,7 @@ export default class RootScreen extends React.Component<{}, RootScreenState> {
   }
 
   isDropZone(gestureState: PanResponderGestureState): boolean {
-    var dz = this.state.dropZoneValues
+    const dz = this.state.dropZoneValues
     return gestureState.moveY > dz.y && gestureState.moveY < dz.y + dz.height
   }
 
@@ -91,8 +91,8 @@ export default class RootScreen extends React.Component<{}, RootScreenState> {
 }
 
 const radius = 36
-let Window = Dimensions.get("window")
-let styles = StyleSheet.create({
+const Window = Dimensions.get("window")
+const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
   },
